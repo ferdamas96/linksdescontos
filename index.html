@@ -9,22 +9,23 @@
   <meta property="og:title" content="Cupons & Descontos — Fernanda Damasceno" />
   <meta property="og:description" content="Indicações que eu uso e recomendo de verdade." />
   <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0F1628" />
 
   <style>
     :root {
-      --navy:   #0D1B3E;
-      --cobalt: #1A3AD4;
-      --silver: #C9CDD6;
-      --bg:     #F4F6FB;
-      --card:   #FFFFFF;
-      --green:  #1F8A5B;
+      --navy:   #E9ECF6;   /* texto principal (off-white suave, dark) */
+      --cobalt: #6E93EA;   /* acento cobalto (clareado p/ fundo escuro) */
+      --silver: #AAB3C7;   /* prata — assinatura */
+      --muted:  #99A3BC;   /* secundário */
+      --bg:     #0F1628;   /* fundo navy escuro */
+      --card:   #182241;   /* superfície dos cards */
+      --line:   rgba(255,255,255,.09);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { -webkit-text-size-adjust: 100%; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
       color: var(--navy);
       line-height: 1.5;
       min-height: 100vh;
@@ -32,6 +33,10 @@
       justify-content: center;
       padding: 40px 20px 56px;
       -webkit-font-smoothing: antialiased;
+      background:
+        radial-gradient(900px 520px at 50% -8%, #1E2C54 0%, rgba(30,44,84,0) 60%),
+        linear-gradient(180deg, #141C34 0%, #0F1628 46%, #0C1120 100%);
+      background-attachment: fixed;
     }
 
     .wrap { width: 100%; max-width: 480px; display: flex; flex-direction: column; align-items: center; }
@@ -41,67 +46,67 @@
       width: 84px; height: 84px; border-radius: 22px;
       background: var(--cobalt); color: #fff;
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 0 0 4px #fff, 0 0 0 6px var(--silver);
+      box-shadow: 0 0 0 4px #0C1120, 0 0 0 6px rgba(110,147,234,.5), 0 10px 30px rgba(0,0,0,.45);
       user-select: none;
     }
     .badge svg { width: 40px; height: 40px; }
 
     h1 { margin-top: 18px; font-size: 1.5rem; font-weight: 700; text-align: center; }
-    .role { margin-top: 6px; font-size: 0.98rem; color: #44506E; text-align: center; max-width: 360px; }
+    .role { margin-top: 6px; font-size: 0.98rem; color: #C2CADC; text-align: center; max-width: 360px; }
 
     .disclosure {
       margin-top: 16px;
       font-size: 0.78rem;
-      color: #586079;
-      background: #EAEFF8;
-      border: 1px solid #DCE3F2;
+      color: #B7C0D6;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.1);
       border-radius: 12px;
       padding: 10px 14px;
       text-align: center;
       max-width: 420px;
     }
 
-    .divider { width: 44px; height: 2px; background: var(--silver); border: none; margin: 22px 0 4px; }
+    .divider { width: 44px; height: 2px; background: linear-gradient(90deg, transparent, var(--silver), transparent); border: none; margin: 22px 0 4px; }
 
     .section-label {
       width: 100%; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; color: #8089A0; margin: 24px 0 4px;
+      text-transform: uppercase; color: var(--silver); margin: 24px 0 4px;
       display: flex; align-items: center; gap: 12px;
     }
-    .section-label::after { content: ""; flex: 1; height: 1px; background: var(--silver); }
+    .section-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 
     /* ---- Cards ---- */
     .links { width: 100%; list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
     .links a {
       display: flex; align-items: center; gap: 14px;
-      background: var(--card); border: 1.5px solid var(--silver); border-radius: 14px;
+      background: linear-gradient(180deg, var(--card) 0%, #131B33 100%); border: 1px solid var(--line); border-radius: 14px;
       padding: 15px 18px; text-decoration: none; color: var(--navy);
       transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
     }
     .links a:hover, .links a:focus-visible {
       border-color: var(--cobalt); transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(26,58,212,.12); outline: none;
+      box-shadow: 0 8px 22px rgba(110,147,234,.18); outline: none;
     }
-    .links a:focus-visible { box-shadow: 0 0 0 3px rgba(26,58,212,.35); }
+    .links a:focus-visible { box-shadow: 0 0 0 3px rgba(110,147,234,.4); }
 
     .ic { flex: 0 0 26px; width: 26px; height: 26px; color: var(--cobalt); display: flex; align-items: center; justify-content: center; }
     .ic svg { width: 24px; height: 24px; }
 
     .txt { display: flex; flex-direction: column; min-width: 0; }
     .txt .t { font-weight: 600; font-size: 1rem; }
-    .txt .s { font-size: 0.8rem; color: #7A8299; }
+    .txt .s { font-size: 0.8rem; color: var(--muted); }
 
     /* chip de cupom */
     .coupon {
       margin-top: 5px; align-self: flex-start;
       font-size: 0.72rem; font-weight: 700; letter-spacing: .5px;
-      color: var(--green); background: #E7F4EC; border: 1px dashed #9AD3B4;
+      color: #79D9A6; background: rgba(46,138,91,.18); border: 1px dashed rgba(86,200,140,.45);
       border-radius: 7px; padding: 2px 8px;
     }
 
-    .arrow { margin-left: auto; color: var(--silver); flex: 0 0 auto; }
+    .arrow { margin-left: auto; color: var(--silver); flex: 0 0 auto; opacity: .65; }
 
-    footer { margin-top: 30px; font-size: 0.74rem; color: #9aa2b5; text-align: center; }
+    footer { margin-top: 30px; font-size: 0.74rem; color: #6E7796; text-align: center; }
 
     @media (max-width: 380px) { .links a { padding: 13px 15px; } h1 { font-size: 1.35rem; } }
   </style>
