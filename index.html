@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cupons & Descontos — Fernanda Damasceno</title>
+  <meta name="description" content="Cupons, descontos e indicações que a Fernanda usa e recomenda de verdade." />
+
+  <meta property="og:title" content="Cupons & Descontos — Fernanda Damasceno" />
+  <meta property="og:description" content="Indicações que eu uso e recomendo de verdade." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --navy:   #0D1B3E;
+      --cobalt: #1A3AD4;
+      --silver: #C9CDD6;
+      --bg:     #F4F6FB;
+      --card:   #FFFFFF;
+      --green:  #1F8A5B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--navy);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px 56px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { width: 100%; max-width: 480px; display: flex; flex-direction: column; align-items: center; }
+
+    /* ---- Cabeçalho ---- */
+    .badge {
+      width: 84px; height: 84px; border-radius: 22px;
+      background: var(--cobalt); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 4px #fff, 0 0 0 6px var(--silver);
+      user-select: none;
+    }
+    .badge svg { width: 40px; height: 40px; }
+
+    h1 { margin-top: 18px; font-size: 1.5rem; font-weight: 700; text-align: center; }
+    .role { margin-top: 6px; font-size: 0.98rem; color: #44506E; text-align: center; max-width: 360px; }
+
+    .disclosure {
+      margin-top: 16px;
+      font-size: 0.78rem;
+      color: #586079;
+      background: #EAEFF8;
+      border: 1px solid #DCE3F2;
+      border-radius: 12px;
+      padding: 10px 14px;
+      text-align: center;
+      max-width: 420px;
+    }
+
+    .divider { width: 44px; height: 2px; background: var(--silver); border: none; margin: 22px 0 4px; }
+
+    .section-label {
+      width: 100%; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #8089A0; margin: 24px 0 4px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .section-label::after { content: ""; flex: 1; height: 1px; background: var(--silver); }
+
+    /* ---- Cards ---- */
+    .links { width: 100%; list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+    .links a {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--card); border: 1.5px solid var(--silver); border-radius: 14px;
+      padding: 15px 18px; text-decoration: none; color: var(--navy);
+      transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+    }
+    .links a:hover, .links a:focus-visible {
+      border-color: var(--cobalt); transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(26,58,212,.12); outline: none;
+    }
+    .links a:focus-visible { box-shadow: 0 0 0 3px rgba(26,58,212,.35); }
+
+    .ic { flex: 0 0 26px; width: 26px; height: 26px; color: var(--cobalt); display: flex; align-items: center; justify-content: center; }
+    .ic svg { width: 24px; height: 24px; }
+
+    .txt { display: flex; flex-direction: column; min-width: 0; }
+    .txt .t { font-weight: 600; font-size: 1rem; }
+    .txt .s { font-size: 0.8rem; color: #7A8299; }
+
+    /* chip de cupom */
+    .coupon {
+      margin-top: 5px; align-self: flex-start;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .5px;
+      color: var(--green); background: #E7F4EC; border: 1px dashed #9AD3B4;
+      border-radius: 7px; padding: 2px 8px;
+    }
+
+    .arrow { margin-left: auto; color: var(--silver); flex: 0 0 auto; }
+
+    footer { margin-top: 30px; font-size: 0.74rem; color: #9aa2b5; text-align: center; }
+
+    @media (max-width: 380px) { .links a { padding: 13px 15px; } h1 { font-size: 1.35rem; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <div class="badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 12a2 2 0 0 1 2-2V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v3a2 2 0 0 1 0 4v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3a2 2 0 0 1-2-2Z"/>
+        <path d="M9 9h0M15 15h0M15 9l-6 6"/>
+      </svg>
+    </div>
+
+    <h1>Cupons &amp; Descontos</h1>
+    <p class="role">Indicações que eu uso e recomendo de verdade.</p>
+
+    <p class="disclosure">🔖 Alguns são <strong>links de indicação</strong>: se você usar, posso ganhar um bônus — <strong>sem custo extra pra você</strong>. Só indico o que eu realmente uso.</p>
+
+    <hr class="divider" />
+
+    <!-- ===================== SAÚDE & BEM-ESTAR ===================== -->
+    <p class="section-label">Saúde &amp; bem-estar</p>
+    <ul class="links">
+
+      <li>
+        <a href="https://quei.ma/c/143ghfa9dj457" target="_blank" rel="noopener noreferrer">
+          <span class="ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5 17.5 17.5M3 12h2M19 12h2M7 7 5.5 5.5M17 17l1.5 1.5"/><circle cx="12" cy="12" r="3.2"/></svg>
+          </span>
+          <span class="txt">
+            <span class="t">Queima Diária</span>
+            <span class="s">Treinos em casa que eu faço · meu link</span>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+
+    </ul>
+
+    <footer>© <span id="y"></span> Fernanda Damasceno de Souza</footer>
+  </main>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
